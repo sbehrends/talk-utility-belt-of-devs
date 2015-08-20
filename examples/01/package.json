@@ -1,0 +1,23 @@
+{
+  "name": "batalk_00",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "sass": "sass --sourcemap=none app/main.scss:dist/main_npm.css",
+    "sassw": "sass --sourcemap=none --watch app/main.scss:dist/main_npm.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "broccoli": "^0.16.7",
+    "broccoli-sass": "^0.6.6",
+    "brunch": "^1.8.5",
+    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-sass": "^1.0.0",
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.0.4",
+    "sass-brunch": "^1.8.11"
+  }
+}

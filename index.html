@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The utility belt of devs - Sergio Behrends</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/css/slides.css">
+    <link rel="stylesheet" type="text/css" href="/css/fontello.css">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,700,500);
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center
+background-image: url(images/dev_belt.png)
+
+# The utility belt of devs
+
+---
+
+background-image: url(images/02_batman.png)
+
+---
+class: right
+background-image: url(images/aerolab_01.jpg)
+
+.rounded.size-20[![Sergio Behrends](images/me.jpg)]
+# Sergio Behrends
+### .icon-twitter[] @Blunk .icon-github[] sbehrends
+### Developer & Designer
+### Lead Developer @ aerolab .icon-logo[]
+
+---
+
+class: center, middle
+# How is your workflow?
+## What are your tools?
+
+---
+
+class: middle
+background-image: url(images/step_01.png)
+
+---
+class: center, middle
+# What are your tasks?
+
+---
+
+name: workflow-overflow
+
+
+---
+class: bg-cover
+background-image: url(images/raw/frustration.gif)
+
+---
+
+class: center, middle
+# Let's clean that up
+
+---
+
+class: middle
+background-image: url(images/step_01.png)
+
+---
+
+background-image: url(images/step_02.png)
+
+---
+
+background-image: url(images/step_03.png)
+
+---
+
+class: center, middle
+# Stay productive.
+# Automate repetitive tasks
+
+---
+
+class: center, middle
+# Choosing the right tool.
+
+## Setup tools, not rules
+
+---
+
+background-image: url(images/someapps.png)
+
+???
+# Some out of the box tools
+- Codekit (https://incident57.com/codekit/)
+- Prepros (https://prepros.io/)
+- Koala (http://koala-app.com/)
+- Others
+
+---
+class: center, middle
+# Let's go a little further
+---
+
+background-image: url(images/4comparison.png)
+
+???
+Gulp and Grunt Task runners.
+Broccoli more about assets pipe + Grunt.
+Grunt -> Twitter, jQuery, Adobe, SauceLabs
+Gulp -> Google, Netflix,
+---
+background-image: url(images/4comparison_bis.png)
+
+???
+Oh... and NPM has some tools
+
+---
+class: middle
+## Gulp .icon-star[]15,582 .icon-fork[]1,588
+## Grunt .icon-star[]9,648 .icon-fork[]1,185
+## Brunch .icon-star[]4,464 .icon-fork[]310
+## Broccoli .icon-star[]2,377 .icon-fork[]137
+
+*On Aug 15, 2015
+
+---
+# Small Example
+### Compiling SASS
+.big-remark[
+```
+sass app/main.scss:dist/main.css
+```
+]
+
+???
+See examples/01/
+--
+.big-remark[
+```
+brunch build
+```
+```
+broccoli build dist
+```
+```
+grunt
+```
+```
+gulp
+```
+```
+npm run sass
+```
+]
+
+???
+See examples/01/
+
+---
+
+# Small Example
+### Compiling SASS
+.big-remark[
+```
+sass --watch app/main.scss:dist/main.css
+```
+]
+--
+.big-remark[
+```
+brunch watch
+```
+```
+broccoli serve
+```
+```
+grunt watch
+```
+```
+gulp watch
+```
+```
+npm run sassw
+```
+]
+
+???
+See examples/01/
+
+---
+
+class: bottom, center
+background-image: url(images/generators.png)
+
+They all have generators to get you going
+
+???
+Slush +200
+Yeoman +2000 
+
+---
+
+
+# Ok... Set... GO!
+
+```terminal
+[sudo] npm install -g yo bower gulp
+```
+
+```terminal
+[sudo] npm install -g generator-gulp-webapp
+
+cd examples/02
+yo gulp-webapp
+```
+???
+See examples/02/
+
+---
+
+background-image: url(images/yeoman_01.png)
+
+---
+
+# Ready to go
+
+```javascript
+├── app
+│   ├── apple-touch-icon.png
+│   ├── favicon.ico
+│   ├── fonts
+│   ├── images
+│   ├── index.html
+│   ├── robots.txt
+│   ├── scripts
+│   └── styles
+├── bower.json
+├── bower_components
+├── gulpfile.babel.js
+├── node_modules
+├── package.json
+└── test
+```
+
+---
+
+background-image: url(images/yeoman_02.png)
+
+# Ready
+```
+gulp serve
+http://localhost:9000
+```
+
+- SASS
+- JSLint
+- Minifier
+- Browser Sync
+- Bower dependecies
+
+---
+background-image: url(images/gotit.jpg)
+
+---
+class: center, middle
+# Fully customizable and extensible with loads of addons.
+
+## Complex workflow maintainable and efficient
+
+### + 1500 plugins in Gulp
+### + 4400 plugins in Grunt
+
+---
+
+# The all in task runner Example
+## Developing a website with lots of tools
+.big-remark[
+```
+git clone https://github.com/sbehrends/grunt-full-landing.git
+```
+]
+.big-text[
+- Template with Handlebars
+- Autoprefixer
+- Live reload
+- Grunt icon
+- Filerev
+- HTML min
+- JSHint
+- Modernizr
+- SASS
+- Sprites
+- Versioning
+]
+
+---
+
+class: middle
+
+.big-test[
+- Starting projects
+- Saves time
+- Standardized worlflow
+- Team working
+- Distribution files
+]
+
+---
+
+background-image: url(images/thanku.jpg)
+class: center
+
+# Thank You!
+
+    </textarea>
+    <script src="js/jquery-2.1.4.min.js">
+    </script>
+    <script src="js/remark.min.js">
+    </script>
+    <script src="js/slides.js">
+    </script>
+  </body>
+</html>

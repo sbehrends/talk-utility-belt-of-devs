@@ -1,0 +1,53 @@
+// Vars
+$white: #eff2f4
+$dark-bg: #272822
+$red: #F56E41
+$yellow: #FFD43D
+$green: #19B842
+
+
+body
+  font-family: 'Roboto'
+  color: $white
+
+h1, h2, h3
+  font-weight: normal
+.remark-code, .remark-inline-code
+  font-family: 'Ubuntu Mono'
+  color: $white
+
+// Slides styling
+.remark-slide-content
+  background-color: $dark-bg
+  h1, h2, h3, h4, p
+    color: $white
+  &.bg-cover
+    background-size: cover
+.remark-slide-number
+  display: none
+.big-remark
+  .remark-code 
+    font-size: 28px
+.big-test
+  font-size: 30px
+// Custom classes
+.size-20
+  max-width: 20%
+  
+.rounded
+  border-radius: 50%
+  overflow: hidden
+  display: inline-block
+  img
+    max-width: 100%
+
+// Custom Highlight.js
+.hljs-monokai .hljs
+  background: #333333
+  padding: 1em 0
+
+.remark-code-line
+  padding: 0 1em
+
+.remark-code-line-highlighted
+  background-color: rgba(0,0,0,0.2)

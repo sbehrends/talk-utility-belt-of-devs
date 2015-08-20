@@ -1,0 +1,46 @@
+body {
+  font-family: "Roboto";
+  color: #eff2f4; }
+
+h1, h2, h3 {
+  font-weight: normal; }
+
+.remark-code, .remark-inline-code {
+  font-family: "Ubuntu Mono";
+  color: #eff2f4; }
+
+.remark-slide-content {
+  background-color: #272822; }
+  .remark-slide-content h1, .remark-slide-content h2, .remark-slide-content h3, .remark-slide-content h4, .remark-slide-content p {
+    color: #eff2f4; }
+  .remark-slide-content.bg-cover {
+    background-size: cover; }
+
+.remark-slide-number {
+  display: none; }
+
+.big-remark .remark-code {
+  font-size: 28px; }
+
+.big-test {
+  font-size: 30px; }
+
+.size-20 {
+  max-width: 20%; }
+
+.rounded {
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block; }
+  .rounded img {
+    max-width: 100%; }
+
+.hljs-monokai .hljs {
+  background: #333333;
+  padding: 1em 0; }
+
+.remark-code-line {
+  padding: 0 1em; }
+
+.remark-code-line-highlighted {
+  background-color: rgba(0, 0, 0, 0.2); }
