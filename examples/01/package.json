@@ -17,6 +17,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-sass": "^1.0.0",
     "gulp": "^3.9.0",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.0.4",
     "sass-brunch": "^1.8.11"
   }

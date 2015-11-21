@@ -3,4 +3,4 @@ module.exports = config:
   paths:
     public: 'dist'
   files:
-    stylesheets: joinTo: 'main_Brunch.css'
+    stylesheets: joinTo: 'main_brunch.css'

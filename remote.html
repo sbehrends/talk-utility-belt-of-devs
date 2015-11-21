@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The utility belt of devs - Sergio Behrends</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/slides.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+  </head>
+  <body class="remote">
+    <button id="nextSlide" class="button button-big">&gt;</button>
+    <button id="prevSlide" class="button">&lt;</button>
+    
+  </div>
+    <script src="js/jquery-2.1.4.min.js">
+    </script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io();
+      // io.on('connection', function(socket){
+      // });
+      $('#nextSlide').on('click', function() {
+        socket.emit('doSlideChange', 'next');
+      });
+      $('#prevSlide').on('click', function() {
+        socket.emit('doSlideChange', 'prev');
+      });
+
+      var $log = document.getElementById("log");
+
+      var xVal = 0;
+
+      var yVal = 100;
+      var updateInterval = 20;
+      var dataLength = 200;
+
+      var tapSequence = [];
+      var tapDistanceMin = 100;
+      var tapDistanceMax = 260;
+
+      // Restriction: iPhone is only knocked on its back (Z axis)
+      var z = {prev:0, current:0, diff: 0, last: 0};
+      var thresholdZ = 5;
+      var thresholdT = 50;
+      var magnitude = 0.0;
+
+      window.ondevicemotion = function(event) {
+
+        var ax = event.acceleration.x;
+        var ay = event.acceleration.y;
+        var az = event.acceleration.z;
+
+        z.prev = z.current;
+        z.current = Math.abs(az);
+        z.diff = z.current - z.prev;
+
+        if (z.current > z.prev && z.diff > thresholdZ && Date.now() - z.last > tapDistanceMin ){
+          z.last = Date.now();
+          //$log.innerHTML += '<br/>' + z.current + " " + z.diff;
+
+          registerTap();
+        }
+
+      }
+
+      setInterval(handleTaps, 4);
+
+      $(function () {
+        var dps = [];
+        var chart = new CanvasJS.Chart("chartContainer",{
+          title :{
+            text: "Live Random Data"
+          },      
+          data: [{
+            type: "line",
+            dataPoints: dps 
+          }]
+        });
+
+        var updateChart = function (count) {
+          count = count || 1;
+          var yVal = z.diff;
+          dps.push({
+            x: xVal,
+            y: yVal
+          });
+          xVal++;
+          // z2 = z1;
+          // };
+          if (dps.length > dataLength)
+          {
+            dps.shift();        
+          }
+          
+          chart.render();   
+
+        };
+
+        // generates first set of dataPoints
+        updateChart(dataLength); 
+
+        // update chart after specified time. 
+        setInterval(function(){updateChart()}, updateInterval); 
+
+      });
+
+
+      function registerTap() {
+        var now = Date.now();
+
+        if( tapSequence.length > 0 ) {
+          var lastTap = tapSequence[ tapSequence.length - 1 ];
+        }
+
+        tapSequence.push({
+          time: Date.now()
+        });
+      }
+
+
+      function handleTaps() {
+        var now = Date.now();
+
+        // Clear the queue when the last knock has expired
+        if( tapSequence.length > 0 && 
+            tapSequence[ tapSequence.length-1 ].time < now - tapDistanceMax ) {
+
+          if( tapSequence.length == 2 ) {
+            $log.innerHTML += "Double Tap!<br/>";
+            socket.emit('doSlideChange', 'next');
+          }
+          if( tapSequence.length == 3 ) {
+            $log.innerHTML += "Triple Tap!<br/>";
+            socket.emit('doSlideChange', 'next');
+          }
+
+          tapSequence = [];
+        }
+      }
+    </script>
+  </body>
+</html>

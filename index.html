@@ -7,7 +7,6 @@
     <link rel="stylesheet" type="text/css" href="css/fontello.css">
     <style>
       @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
-      @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,700,500);
     </style>
   </head>
   <body>
@@ -16,36 +15,75 @@
 class: center
 background-image: url(images/dev_belt.png)
 
-# The utility belt of devs
+# .orange.medium[_ / ] .medium[The utility belt of devs]
+## A better workflow
+.author-bottom[Sergio Behrends]
+
+???
+Intro
 
 ---
 
 background-image: url(images/02_batman.png)
 
 ---
-class: right
-background-image: url(images/aerolab_01.jpg)
+class: right, not-that-big
+background-image: url(images/bg-1.jpg)
 
 .rounded.size-20[![Sergio Behrends](images/me.jpg)]
 # Sergio Behrends
 ### .icon-twitter[] @Blunk .icon-github[] sbehrends
 ### Developer & Designer
 ### Lead Developer @ aerolab .icon-logo[]
+---
+class: middle
+
+# .icon-twitter[] @.underline[Blunk]
+# .icon-twitter[] #.underline[frontinsampa]
+
+---
+class: center, middle
+background-image: url(images/aerolab_01.jpg)
+
+.aerolab-logo[
+.icon-logo[]
+![](images/aerolab_co.svg)
+]
+
+???
+Que hacemos en Aerolab
+---
+
+class: center, middle
+background-image: url(images/aerolab_works.jpg)
 
 ---
 
 class: center, middle
-# How is your workflow?
-## What are your tools?
+# The .orange[&lt;&#65279;dev class=&quot;web&quot;&#65279;/&gt;] knowledge
 
 ---
+
 
 class: middle
 background-image: url(images/step_01.png)
+---
+
+class: center, middle
+# More .orange[complex] sites/webapps
+
+???
+Browsers are more advanced than ever, and with the new technologies of the HTML5 era come a lot of new possibilities.
+---
+
+class: center, middle
+# How is your .underline[workflow]?
+## What are your .underline[tools]?
+
 
 ---
 class: center, middle
-# What are your tasks?
+# What are your .underline[tasks]?
 
 ---
 
@@ -54,7 +92,7 @@ name: workflow-overflow
 
 ---
 class: bg-cover
-background-image: url(images/raw/frustration.gif)
+background-image: url(images/frustration.gif)
 
 ---
 
@@ -77,19 +115,66 @@ background-image: url(images/step_03.png)
 ---
 
 class: center, middle
-# Stay productive.
-# Automate repetitive tasks
+# So... whats .orange[your flow]? Team? Product?
+???
+Staying productive is one of the most crucial habits / things we can do, in order to feel a sense of alignment with our projects and the work we do
+
+---
+
+background-image: url(images/work-1.jpg)
+
+???
+- *Scaffold* is where you setup your web project. This is where you’ll create a git repo, prepare file structures, download libraries and dependencies and all other tasks just to make sure your project is ready to go.
+- *Develop* is where you spend the most of your time – writing code!
+- *Test* is where you test to see if your code works. You’ll go back and develop more if things aren’t working out, or if your new code breaks some other stuff on your website.
+- *Integrate* is where you merge your code with the rest of your team. This usually involves merging git branches. You skip integration if you work solo.
+- *Optimize* is where you prepare all your assets for use on the production server. Files are optimized such that they allow your visitors to view your site as quickly as possible.
+- *Deploy* is where you push your code and assets up into the server and allow changes to be viewed by the public.
+
+---
+
+background-image: url(images/work-2.jpg)
+
+---
+
+background-image: url(images/work-3.jpg)
+
+---
+
+background-image: url(images/work-4.jpg)
+
+---
+
+background-image: url(images/work-5.jpg)
+
+---
+
+background-image: url(images/work-6.jpg)
+
+---
+
+background-image: url(images/work-7.jpg)
 
 ---
 
 class: center, middle
-# Choosing the right tool.
-
-## Setup tools, not rules
+# .orange[Stay productive].
+# .underline[Automate] repetitive tasks
 
 ---
 
-background-image: url(images/someapps.png)
+class: center, middle
+# .orange[Setup rules], don't let tools rule you
+
+
+---
+
+class: center, middle
+# Some .orange[Ready to Go] apps
+
+---
+
+background-image: url(images/bg-2.jpg)
 
 ???
 # Some out of the box tools
@@ -100,34 +185,37 @@ background-image: url(images/someapps.png)
 
 ---
 class: center, middle
-# Let's go a little further
+# But.. we want .orange[&amp;#91;] more .orange[&amp;#93;]
+
 ---
 
-background-image: url(images/4comparison.png)
+background-image: url(images/bg-3.jpg)
 
 ???
 Gulp and Grunt Task runners.
 Broccoli more about assets pipe + Grunt.
 Grunt -> Twitter, jQuery, Adobe, SauceLabs
 Gulp -> Google, Netflix,
----
-background-image: url(images/4comparison_bis.png)
-
-???
-Oh... and NPM has some tools
+Webpack
 
 ---
 class: middle
-## Gulp .icon-star[]15,582 .icon-fork[]1,588
-## Grunt .icon-star[]9,648 .icon-fork[]1,185
-## Brunch .icon-star[]4,464 .icon-fork[]310
-## Broccoli .icon-star[]2,377 .icon-fork[]137
 
-*On Aug 15, 2015
+.big-table[
+|                      |  .icon-star[]  | .icon-fork[] |
+|----------------------|:--------------:|:------------:|
+| .underline[Gulp]     | 17,557         | 1,941        |
+| .underline[Grunt]    | 10,188         | 1,240        |
+| .underline[Webpack]  | 9,812          | 675          |
+| .underline[Brunch]   | 4,767          | 324          |
+| .underline[Broccoli] | 2,542          | 152          |
+]
+
+*On Nov 19, 2015
 
 ---
 # Small Example
-### Compiling SASS
+### Compiling .orange[SASS]
 .big-remark[
 ```
 sass app/main.scss:dist/main.css
@@ -161,7 +249,7 @@ See examples/01/
 ---
 
 # Small Example
-### Compiling SASS
+### Compiling .orange[SASS] and .orange[&amp;#91;] watch .orange[&amp;#93;]
 .big-remark[
 ```
 sass --watch app/main.scss:dist/main.css
@@ -191,20 +279,42 @@ See examples/01/
 
 ---
 
+class: middle, center
+background-image: url(images/bg-title.jpg)
+
+# .upper[Scaffold]
+
+---
+background-image: url(images/work-6.jpg)
+
+---
 class: bottom, center
-background-image: url(images/generators.png)
+background-image: url(images/bg-4.jpg)
 
 They all have generators to get you going
 
 ???
 Slush +200
 Yeoman +2000 
+---
+
+class: bottom, center
+background-image: url(images/yeoman_00.png)
+---
+
+class: center, middle
+# Fully customizable and extensible with loads of addons.
+
+## Complex workflow maintainable and efficient
+
+### + 1500 plugins in Gulp
+### + 4400 plugins in Grunt
 
 ---
 
 
-# Ok... Set... GO!
-
+# Ok... Set... .orange[GO!]
+.big-remark[
 ```terminal
 [sudo] npm install -g yo bower gulp
 ```
@@ -215,6 +325,7 @@ Yeoman +2000
 cd examples/02
 yo gulp-webapp
 ```
+]
 ???
 See examples/02/
 
@@ -224,7 +335,7 @@ background-image: url(images/yeoman_01.png)
 
 ---
 
-# Ready to go
+# .underline[Ready] to go
 
 ```javascript
 ├── app
@@ -243,12 +354,24 @@ background-image: url(images/yeoman_01.png)
 ├── package.json
 └── test
 ```
+---
+
+background-image: url(images/gotit.jpg)
 
 ---
 
+class: middle, center
+background-image: url(images/bg-title.jpg)
+
+# .upper[Develop]
+
+---
+
+
 background-image: url(images/yeoman_02.png)
 
-# Ready
+# .underline[Develop]
+
 ```
 gulp serve
 http://localhost:9000
@@ -261,26 +384,161 @@ http://localhost:9000
 - Bower dependecies
 
 ---
-background-image: url(images/gotit.jpg)
+
+<video autoplay loop class="video-bg">
+  <source src="/images/yeoman_03.mp4" type="video/mp4">
+</video>
 
 ---
-class: center, middle
-# Fully customizable and extensible with loads of addons.
-
-## Complex workflow maintainable and efficient
-
-### + 1500 plugins in Gulp
-### + 4400 plugins in Grunt
+class: middle, center
+background-image: url(images/bg-demo.jpg)
+# .underline[Demo]
 
 ---
 
-# The all in task runner Example
-## Developing a website with lots of tools
+class: bg-cover
+background-image: url(images/wishmeluck.gif)
+
+---
+
+class: middle, center
+background-image: url(images/bg-demo.jpg)
+# .underline[Demo]
+
+---
+background-image: url(images/work-6.jpg)
+---
+class: middle, center
+background-image: url(images/bg-title.jpg)
+
+# .upper[Test]
+
+---
+
+class: middle
+
+# .orange[_ /] JSLint
+# .orange[_ /] Unit Testing
+# .orange[_ /] Regression Test
+
+---
+
+# JSLint
+
+.big-remark[
+```javascript
+console.log('\'Allo \'Allo!') ;
+```
+]
+
+--
+.lint[
+Unexpected whitespace before semicolon  semi-spacing
+
+.red[✖ 1 problem (1 error, 0 warnings)]
+]
+--
+
+.big-remark[
+```javascript
+console.log('\'Allo \'Allo!');
+```
+]
+
+---
+
+# Unit Testing
+```javascript
+describe('Check button link', function() {
+  var button = document.getElementById('signup-button');
+
+  it('Button exists in the DOM', function() {
+    expect(button).to.not.equal(null);
+  });
+
+  it('Button link is correct', function() {
+    expect(button.getAttribute('href')).to.equal('http://aerolab.co')
+  });
+});
+```
+--
+.green[
+ ✔ Button exists in the DOM (4ms)
+ 
+ ✔ Button link is correct (13ms)
+
+ ✔ 1 test complete (17ms)
+]
+---
+
+background-image: url(images/regression-1.jpg)
+# Regression Test
+
+---
+class: middle, center
+background-image: url(images/bg-demo.jpg)
+# .underline[Let's find out]
+
+---
+
+background-image: url(images/regression-2.jpg)
+# Regression Test
+
+---
+class: middle, center
+background-image: url(images/bg-5.jpg)
+
+---
+
+class: middle, center
+background-image: url(images/bg-title.jpg)
+
+# .upper[Integrate]
+???
+Working with git as a team
+git-flow
+
+---
+class: center
+background-image: url(images/bg-8.jpg)
+# .orange[Respect] standards defined by your team
+
+---
+class: middle
+background-image: url(images/bg-6.jpg)
+
+# Use .orange[git] + git-flow
+
+---
+
+class: middle, center
+background-image: url(images/bg-title.jpg)
+
+# .upper[Optimize]
+???
+Concat, uglify, optimize images
+
+---
+
+class: middle
+background-image: url(images/bg-7.jpg)
+# Size: 1.7MB -> .orange[565kb]
+# Requests: 34 -> .orange[7]
+# Speed: 10.08s -> .orange[3.65s]
+
+---
+background-image: url(images/work-7.jpg)
+
+---
+# The .orange[all-in-one] task runner example
+## Developing a website with .underline[lots of tools]
+
 .big-remark[
 ```
 git clone https://github.com/sbehrends/grunt-full-landing.git
 ```
 ]
+
 .big-text[
 - Template with Handlebars
 - Autoprefixer
@@ -297,29 +555,40 @@ git clone https://github.com/sbehrends/grunt-full-landing.git
 
 ---
 
-class: middle
-
-.big-test[
-- Starting projects
-- Saves time
-- Standardized worlflow
-- Team working
-- Distribution files
-]
+class: middle, center
+background-image: url(images/bg-demo.jpg)
+# .underline[Demo]
 
 ---
 
-background-image: url(images/thanku.jpg)
-class: center
+class: middle, center
+background-image: url(images/bg-demo.jpg)
+# .underline[Other ideas to automate tasks?]
+---
 
-# Thank You!
+class: center
+background-image: url(images/bg-9.jpg)
+# .underline[What we learned?]
+---
+
+background-image: url(images/horse_me_dark.jpg)
+class: bottom, dark-text
+
+# .orange.bold[_ / ] .bold[Thank You!]
+# .bold[Questions?]
+### sergio@aerolab.co
+### .icon-twitter[] @Blunk
+
+
 
     </textarea>
     <script src="js/jquery-2.1.4.min.js">
     </script>
     <script src="js/remark.min.js">
     </script>
+    <script src="socket.io/socket.io.js"></script>
     <script src="js/slides.js">
     </script>
+    
   </body>
 </html>

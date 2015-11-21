@@ -4,10 +4,10 @@ $dark-bg: #272822
 $red: #F56E41
 $yellow: #FFD43D
 $green: #19B842
-
+$orange: #FF7B00
 
 body
-  font-family: 'Roboto'
+  font-family: 'Dosis'
   color: $white
 
 h1, h2, h3
@@ -19,10 +19,17 @@ h1, h2, h3
 // Slides styling
 .remark-slide-content
   background-color: $dark-bg
+  padding: 1em 2em
   h1, h2, h3, h4, p
     color: $white
+  &.not-that-big
+    h3
+      font-size: 32px
   &.bg-cover
     background-size: cover
+  &.dark-text
+    h1, h2, h3, h4, p
+      color: black
 .remark-slide-number
   display: none
 .big-remark
@@ -30,6 +37,13 @@ h1, h2, h3
     font-size: 28px
 .big-test
   font-size: 30px
+.video-bg
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+
 // Custom classes
 .size-20
   max-width: 20%
@@ -41,6 +55,16 @@ h1, h2, h3
   img
     max-width: 100%
 
+
+.aerolab-logo
+  color: #FF7B00
+  .icon-logo
+    font-size: 180px
+  img
+    display: block
+    max-width: 300px
+    margin: 0 auto
+    margin-top: 30px
 // Custom Highlight.js
 .hljs-monokai .hljs
   background: #333333
@@ -51,3 +75,57 @@ h1, h2, h3
 
 .remark-code-line-highlighted
   background-color: rgba(0,0,0,0.2)
+
+.upper
+  text-transform: uppercase
+.bold
+  font-weight: 600
+.medium
+  font-weight: 500
+.orange
+  color: $orange
+.red
+  color: $red
+.green
+  &, & p
+    color: $green
+.underline
+  position: relative
+  &:after
+    content: ''
+    position: absolute
+    bottom: 4px
+    left: -4px
+    border-bottom: 4px solid $orange
+    padding: 0 5px
+    width: 100%
+.big-table
+  font-size: 45px
+  td
+    padding: 10px 30px
+.author-bottom
+  position: absolute
+  bottom: 40px
+  right: 40px
+  font-size: 26px
+
+.remote
+  background: black
+.button
+  border: 1px solid white
+  border-radius: 500%
+  background: transparent
+  outline: none
+  color: white
+  display: block
+  margin: 0 auto
+  margin-top: 30px
+
+  height: 80px
+  width: 80px
+  &.button-big
+    height: 130px
+    width: 130px
+
+#chartContainer
+  display: none

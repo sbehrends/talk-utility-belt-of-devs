@@ -54,3 +54,18 @@ function workflowKillingMeStart() {
   }, 25);
 
 }
+
+// Remote
+var socket = io();
+// socket.on('connection', function(socket){
+  socket.on('slideChange', function(data){
+    if (data == 'next') {
+      slideshow.gotoNextSlide();
+      return;
+    }
+    if (data == 'prev') {
+      slideshow.gotoPreviousSlide();
+      return;
+    }
+  });
+// });
